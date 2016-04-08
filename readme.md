@@ -2,7 +2,7 @@
 
 > Do your math.
 
-Simple eletron app for doing your math.
+Simple [electron](http://electron.atom.io/) app for doing your math.
 
 ## Clone
 
