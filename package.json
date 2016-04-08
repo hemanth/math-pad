@@ -1,0 +1,35 @@
+{
+  "name": "math-pad",
+  "productName": "MathPad",
+  "version": "0.0.0",
+  "description": "Do your math.",
+  "license": "MIT",
+  "repository": "hemanth/math-pad",
+  "author": {
+    "name": "Hemanth.HM",
+    "email": "hemanth.hm@gmail.com",
+    "url": "h3manth.com"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . --out=dist --app-version=$npm_package_version --prune --asar --overwrite --all"
+  },
+  "files": [
+    "index.js",
+    "index.html",
+    "index.css"
+  ],
+  "keywords": [
+    "electron-app",
+    "electron",
+    "math"
+  ],
+  "dependencies": {
+    "electron-debug": "^0.5.0",
+    "mathjs": "^3.1.4"
+  },
+  "devDependencies": {
+    "electron-packager": "^6.0.0",
+    "electron-prebuilt": "^0.37.4"
+  }
+}

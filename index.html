@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Math Pad 😎</title>
+		<link rel="stylesheet" href="index.css">
+	</head>
+	<body>
+	<div class="fullscreen-overlay">
+	    <div class="textarea-wrap">
+	      <textarea id="math-pad" placeholder="Enter your math expression: sin(90) + cos(90)"></textarea>
+	    </div>
+	</div>
+	</body>
+	<script>
+		var math = require('mathjs');
+		var pad = document.getElementById('math-pad');
+		pad.addEventListener('keypress', (evn) => {
+			if (evn.keyCode === 13) {
+				var content = evn.target.value;
+				var lastLine = content.split('\n').filter((l) => l !=='').pop();
+				var res = math.eval(lastLine);
+				pad.value = `${pad.value} ${res}`
+			}
+		});
+	</script>
+</html>
